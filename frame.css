@@ -3,7 +3,7 @@
     height:100vh;
 }
 .title {
-    margin-top:7rem;
+    margin-top:2rem;
 }
 .about {
     height:100vh;
@@ -14,6 +14,9 @@
 #feture {
    margin-bottom:2rem;
 }
+#close{
+    margin:1rem 0;
+}
 
 }
 @media screen and (max-width: 1020px) {
@@ -21,10 +24,33 @@
         margin-top:5rem;
     } */
 }
+#modal-height{
+    margin:5rem 0;
+}
 .hero {
     background:url('/img/bg.jpeg');
     background-size:cover;
     background-repeat:no-repeat;
+}
+.music-card {
+    background:linear-gradient(90deg,
+    #0f0c29, #302b63, #24243e
+);
+}
+.modal-body {
+    background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+    box-shadow: 0 4px 8px aqua; /* Adjust the shadow properties as needed */
+    
+}
+.hidden {
+    display: none;
+}
+.footer {
+    padding-bottom:2rem;
+    margin-top:2rem;
+}
+.footer, .text-footer {
+    padding:1rem 0;
 }
 #music {
     margin:1rem  1rem;
