@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*  */
+@media screen and (max-width: 567px) {
+section .hero {
+    heigth:100vh;
+}
+}

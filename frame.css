@@ -1,0 +1,54 @@
+@media screen and (max-width: 640px) {
+.hero {
+    height:100vh;
+}
+.title {
+    margin-top:7rem;
+}
+.about {
+    height:100vh;
+}
+.library {
+    height:100vh;
+}
+#feture {
+   margin-bottom:2rem;
+}
+
+}
+@media screen and (max-width: 1020px) {
+    /* .title {
+        margin-top:5rem;
+    } */
+}
+.hero {
+    background:url('/img/bg.jpeg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+#music {
+    margin:1rem  1rem;
+}
+.music-title {
+    margin-top:1rem;
+}
+.filter-btn {
+    transition: background-color 0.3s;
+}
+.filter-btn:hover {
+    background-color: #3b82f6; /* Warna biru saat dihover */
+}
+
+#volume-control {
+    width: 100%;
+    margin-top: 1rem;
+}
+/* .max-w-sm, .music-card {
+    max-width:22rem!important;
+    max-height:auto;
+} */
+
+
+
+
+
