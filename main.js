@@ -39,45 +39,71 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
-
+// 
 // ============ Play
 document.addEventListener("DOMContentLoaded", function () {
     const audioPlayers = document.querySelectorAll('.audio-player');
     const playPauseButtons = document.querySelectorAll('.play-pause');
     const volumeControls = document.querySelectorAll('.volume-control');
     const durationDisplays = document.querySelectorAll('.duration');
+    const circles = document.querySelectorAll('.img-circle');
+    const images = document.querySelectorAll('.music-card img:first-child');
 
     playPauseButtons.forEach(function(button, index) {
         button.addEventListener('click', function () {
             const audioPlayer = audioPlayers[index];
+            const circle = circles[index];
+            const image = images[index];
+
             if (audioPlayer.paused) {
                 pauseAllPlayers();
                 audioPlayer.play();
                 button.innerHTML = '<i class="fas fa-pause"></i>';
+                circle.classList.add('rotate');
+                circle.classList.add('highlight');
+                image.classList.add('blur');
+                circle.classList.add('img-shadow');
+                image.classList.add('blur2');
+                
             } else {
                 audioPlayer.pause();
                 button.innerHTML = '<i class="fas fa-play"></i>';
+                circle.classList.remove('rotate');
+                circle.classList.remove('highlight');
+                image.classList.remove('blur');
+                
             }
         });
     });
 
     audioPlayers.forEach(function(audioPlayer, index) {
         const durationDisplay = durationDisplays[index];
-        
+
         audioPlayer.addEventListener('timeupdate', function () {
-            const minutes = Math.floor(audioPlayer.currentTime / 60);
-            const seconds = Math.floor(audioPlayer.currentTime % 60);
-            durationDisplay.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            const currentTime = audioPlayer.currentTime;
+            const duration = audioPlayer.duration;
+            const currentMinutes = Math.floor(currentTime / 60);
+            const currentSeconds = Math.floor(currentTime % 60);
+            const totalMinutes = Math.floor(duration / 60);
+            const totalSeconds = Math.floor(duration % 60);
+            durationDisplay.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds} / ${totalMinutes}:${totalSeconds < 10 ? '0' + totalSeconds : totalSeconds}`;
         });
 
         audioPlayer.addEventListener('loadedmetadata', function () {
-            const totalMinutes = Math.floor(audioPlayer.duration / 60);
-            const totalSeconds = Math.floor(audioPlayer.duration % 60);
+            const duration = audioPlayer.duration;
+            const totalMinutes = Math.floor(duration / 60);
+            const totalSeconds = Math.floor(duration % 60);
             durationDisplay.textContent = `0:00 / ${totalMinutes}:${totalSeconds < 10 ? '0' + totalSeconds : totalSeconds}`;
         });
 
         audioPlayer.addEventListener('ended', function () {
             playPauseButtons[index].innerHTML = '<i class="fas fa-play"></i>';
+            circles[index].classList.remove('rotate');
+            circles[index].classList.remove('highlight');
+            images[index].classList.remove('blur');
+            images[index].classList.add('blur2');
+            circles[index].classList.add('img-shadow');
+            
         });
     });
 
@@ -85,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         volumeControl.addEventListener('input', function () {
             const audioPlayer = audioPlayers[index];
             const volume = volumeControl.value;
-            audioPlayer.volume = volume > 1 ? 1 : volume;
+            audioPlayer.volume = volume > 0.5 ? 1.0 : volume;
         });
     });
 
@@ -94,12 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!audioPlayer.paused) {
                 audioPlayer.pause();
                 playPauseButtons[index].innerHTML = '<i class="fas fa-play"></i>';
+                circles[index].classList.remove('rotate');
+                circles[index].classList.remove('highlight');
+                images[index].classList.remove('blur');
+                images[index].classList.add('blur2');
+                circles[index].classList.add('img-shadow');
+                
             }
         });
     }
 });
+// ===============
 
-// ====================
 document.addEventListener('DOMContentLoaded', () => {
     const downloadButtons = document.querySelectorAll('.download');
     const form = document.getElementById('use-form');
@@ -117,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
+        const name = document.getElementById('Name').value;
+        const email = document.getElementById('Email').value;
         const audioFile = form.dataset.audio;
         const audioFileName = audioFile.split('/').pop();
 
@@ -179,8 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
         });
     });
-});
-// =============
+});  
+// ================
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('create-music');
     const radioSongs = document.getElementById('default-radio-1');

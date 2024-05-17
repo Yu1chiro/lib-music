@@ -8,6 +8,7 @@
 .about {
     height:100vh;
 }
+
 .library {
     height:100vh;
 }
@@ -17,12 +18,77 @@
 #close{
     margin:1rem 0;
 }
-
+.img-circle {
+    width:60%!important;
+    margin:2rem 0!important;
+    left:1rem;
+   }
 }
-@media screen and (max-width: 1020px) {
-    /* .title {
-        margin-top:5rem;
-    } */
+@media screen and (max-width: 1024px) {
+   .img-circle {
+    width:60%!important;
+    margin:2rem 3rem!important;
+   }
+}
+/* @media (min-width: 1200px) {
+    #music {
+        margin-left:10rem!important;
+    }
+}
+@media (min-width: 1100px) {
+    #music {
+        margin-left:3rem!important;
+    }
+} */
+.rotate {
+    animation: rotation 4s infinite linear;
+}
+
+.highlight {
+    box-shadow: 10 20 10px aqua;
+}
+
+.blur {
+    filter: blur(3px);
+}
+.blur2 {
+    filter: blur(2px);
+}
+.img-shadow {
+    box-shadow: 0 0 5px black;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+
+.img-circle {
+  margin:3rem 0;
+  margin-left:5rem;
+}
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
 }
 #modal-height{
     margin:5rem 0;
