@@ -12,23 +12,30 @@
 .library {
     height:100vh;
 }
+.filter-btn {
+    margin-bottom:1rem!important;
+}
 #feture {
    margin-bottom:2rem;
 }
 #close{
     margin:1rem 0;
 }
+
+
 .img-circle {
     width:60%!important;
     margin:2rem 0!important;
     left:1rem;
    }
+
 }
 @media screen and (max-width: 1024px) {
    .img-circle {
     width:60%!important;
     margin:2rem 3rem!important;
    }
+  
 }
 /* @media (min-width: 1200px) {
     #music {
@@ -41,11 +48,23 @@
     }
 } */
 .rotate {
-    animation: rotation 4s infinite linear;
+    animation: djBounce 1.2s infinite;
+}
+
+@keyframes djBounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .highlight {
-    box-shadow: 10 20 10px aqua;
+    box-shadow: 10px 20px 10px aqua;
 }
 
 .blur {
@@ -58,25 +77,6 @@
     box-shadow: 0 0 5px black;
 }
 
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
-@keyframes zoomInOut {
-    0% {
-        transform: scale(0.5);
-    }
-    50% {
-        transform: scale(1);
-    }
-}
 
 
 .img-circle {
