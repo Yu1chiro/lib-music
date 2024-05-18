@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.min.css">
+    
+    
+
 </head>
 <body class="bg-gray-900"> 
-
-
-
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -32,7 +32,7 @@
                 <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                <a href="#about" id="active-nav" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
               </li>
               <li>
                 <a href="#library" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Music</a>
@@ -44,7 +44,6 @@
           </div>
         </div>
       </nav>
-      
 <!-- ===Hero====== -->
 <section class="hero bg-center bg-no-repeat  bg-gray-700 bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen text-center py-24 lg:py-56">
@@ -60,14 +59,14 @@
     </div>
 </section>
 <!-- ===About=== -->
-<section class="about bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply" style="background-image: url('img/village.jpeg'); background-attachment: fixed;">
+<section class="about bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply" style="background-image: url('img/about.jpeg'); background-attachment: fixed;">
     <div id="about" class="px-4 mx-auto max-w-screen text-center py-24 lg:py-56">
-        <div class="title">
+        <div class="about-title">
             <h1 class="about-title text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">About</h1>     
             <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48">
-                Sebuah perpustakaan musik sederhana dan kecil yang menampilkan beberapa lagu yang mewakili perasaan dan emosional diriku sendiri, musik digital memberikan diriku kebebasan dalam mengekspresikan perasaan lewat sebuah lagu. 
-                Dengan merekam, mengedit, dan merilis lagu-lagu yang ku ibaratkan sebagai kenyamanan dan rumah ku sendiri. 
-                Musik digital benar-benar membuka pintu kreativitas dan kebebasan berekspresi tanpa batas.<br> -yui
+                Sebuah perpustakaan musik sederhana dan kecil yang menampilkan beberapa lagu yang mewakili perasaan dan emosional diriku, musik memberikan diriku kebebasan dalam mengekspresikan perasaan lewat sebuah lagu. 
+                Dengan menulis, mengedit, dan merilis lagu-lagu yang ku ibaratkan sebagai kenyamanan dan rumah ku sendiri. 
+                Musik benar-benar membuka pintu kreativitas dan kebebasan berekspresi tanpa batas.<br> -ゆい☕
             </p> 
             <div class="mt-3">
                 <button data-modal-target="small-modal" data-modal-toggle="small-modal" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
@@ -385,7 +384,7 @@
 <section class="footer bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply" style="background-image: url('img/village.jpeg'); background-attachment: fixed;">
     <div  class="px-4 mx-auto max-w-screen text-center">
     <p class="text-lg text-footer font-normal text-white lg:text-xl sm:px-16 lg:px-48">
-        Develop by❤️ Yuichiro
+        By -ゆい☕
     </div>
     </div>
 <!-- ========== -->
@@ -465,6 +464,7 @@
         </div>
     </div>
 </div>
+<!--  -->
 
 <script src="main.js"></script>
 <script src="subs.js"></script>

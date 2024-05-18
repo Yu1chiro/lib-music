@@ -1,3 +1,27 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var loadingSpinner = document.createElement('div');
+    loadingSpinner.id = 'loading-spinner';
+    loadingSpinner.innerHTML = `
+      <div class="spinner6">
+        <i class="fas fa-music"></i>
+        <i class="fas fa-music"></i>
+        <i class="fas fa-music"></i>
+        <i class="fas fa-music"></i>
+      </div>`;
+    document.body.appendChild(loadingSpinner);
+  });
+  
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var loadingSpinner = document.getElementById('loading-spinner');
+      if (loadingSpinner) {
+        loadingSpinner.style.display = 'none';
+      }
+    }, 2000); // Penundaan 2 detik
+  });
+  
+
+// =================
 document.querySelectorAll('.filter-btn').forEach(function(button) {
     button.addEventListener('click', function() {
         var selectedCategory = this.getAttribute('data-category');
@@ -173,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success!',
-                    text: 'Data berhasil terkirim!',
+                    text: 'Thank you! for download lets see your notification',
                     confirmButtonText: 'OK'
                 }).then(() => {
                     // Start the download
@@ -291,7 +315,7 @@ Lyrics: ${data.lyrics}
                         Swal.fire({
                             icon: 'success',
                             title: 'Success!',
-                            text: 'Data sent successfully!'
+                            text: 'Thank you! We will send your song via email within 1-5 working days thank you'
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 form.reset();
