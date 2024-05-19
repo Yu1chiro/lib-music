@@ -154,7 +154,7 @@
     margin:5rem 0;
 }
 .hero {
-    background:url('/img/bg.jpeg');
+    background:url('/img/village.jpeg');
     background-size:cover;
     background-repeat:no-repeat;
 }
@@ -191,10 +191,23 @@
     background-color: #3b82f6; /* Warna biru saat dihover */
 }
 
-#volume-control {
+/* #volume-control {
     width: 100%;
     margin-top: 1rem;
+} */
+.music-card .flex.items-center.justify-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.volume-control {
+    flex-grow: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
 /* .max-w-sm, .music-card {
     max-width:22rem!important;
     max-height:auto;

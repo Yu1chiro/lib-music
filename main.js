@@ -65,6 +65,7 @@ style.innerHTML = `
 document.head.appendChild(style);
 // 
 // ============ Play
+
 document.addEventListener("DOMContentLoaded", function () {
     const audioPlayers = document.querySelectorAll('.audio-player');
     const playPauseButtons = document.querySelectorAll('.play-pause');
@@ -72,12 +73,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const durationDisplays = document.querySelectorAll('.duration');
     const circles = document.querySelectorAll('.img-circle');
     const images = document.querySelectorAll('.music-card img:first-child');
+    const volumePercentages = document.querySelectorAll('.volume-percentage');
+    const progressBars = document.querySelectorAll('.progress-bar');
+    const currentTimeDisplays = document.querySelectorAll('.current-time');
+    const totalTimeDisplays = document.querySelectorAll('.total-time');
 
     playPauseButtons.forEach(function(button, index) {
         button.addEventListener('click', function () {
             const audioPlayer = audioPlayers[index];
             const circle = circles[index];
             const image = images[index];
+            const progressBar = progressBars[index];
+            const currentTimeDisplay = currentTimeDisplays[index];
+            const totalTimeDisplay = totalTimeDisplays[index];
 
             if (audioPlayer.paused) {
                 pauseAllPlayers();
@@ -88,54 +96,59 @@ document.addEventListener("DOMContentLoaded", function () {
                 image.classList.add('blur');
                 circle.classList.add('img-shadow');
                 image.classList.add('blur2');
-                
             } else {
                 audioPlayer.pause();
                 button.innerHTML = '<i class="fas fa-play"></i>';
                 circle.classList.remove('rotate');
                 circle.classList.remove('highlight');
                 image.classList.remove('blur');
-                
             }
-        });
-    });
 
-    audioPlayers.forEach(function(audioPlayer, index) {
-        const durationDisplay = durationDisplays[index];
+            audioPlayer.addEventListener('timeupdate', function() {
+                const currentTime = audioPlayer.currentTime;
+                const duration = audioPlayer.duration;
+                const progress = (currentTime / duration) * 100;
+                progressBar.value = progress;
+                progressBar.style.setProperty('--progress', `${progress}%`);
 
-        audioPlayer.addEventListener('timeupdate', function () {
-            const currentTime = audioPlayer.currentTime;
-            const duration = audioPlayer.duration;
-            const currentMinutes = Math.floor(currentTime / 60);
-            const currentSeconds = Math.floor(currentTime % 60);
-            const totalMinutes = Math.floor(duration / 60);
-            const totalSeconds = Math.floor(duration % 60);
-            durationDisplay.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds} / ${totalMinutes}:${totalSeconds < 10 ? '0' + totalSeconds : totalSeconds}`;
-        });
+                const currentMinutes = Math.floor(currentTime / 60);
+                const currentSeconds = Math.floor(currentTime % 60);
+                currentTimeDisplay.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds}`;
+            });
 
-        audioPlayer.addEventListener('loadedmetadata', function () {
-            const duration = audioPlayer.duration;
-            const totalMinutes = Math.floor(duration / 60);
-            const totalSeconds = Math.floor(duration % 60);
-            durationDisplay.textContent = `0:00 / ${totalMinutes}:${totalSeconds < 10 ? '0' + totalSeconds : totalSeconds}`;
-        });
+            audioPlayer.addEventListener('loadedmetadata', function() {
+                const duration = audioPlayer.duration;
+                const totalMinutes = Math.floor(duration / 60);
+                const totalSeconds = Math.floor(duration % 60);
+                totalTimeDisplay.textContent = `${totalMinutes}:${totalSeconds < 10 ? '0' + totalSeconds : totalSeconds}`;
+            });
 
-        audioPlayer.addEventListener('ended', function () {
-            playPauseButtons[index].innerHTML = '<i class="fas fa-play"></i>';
-            circles[index].classList.remove('rotate');
-            circles[index].classList.remove('highlight');
-            images[index].classList.remove('blur');
-            images[index].classList.add('blur2');
-            circles[index].classList.add('img-shadow');
-            
+            audioPlayer.addEventListener('ended', function () {
+                playPauseButtons[index].innerHTML = '<i class="fas fa-play"></i>';
+                circles[index].classList.remove('rotate');
+                circles[index].classList.remove('highlight');
+                images[index].classList.remove('blur');
+                images[index].classList.add('blur2');
+                circles[index].classList.add('img-shadow');
+                progressBar.value = 0; // Reset progress bar
+                currentTimeDisplay.textContent = '0:00';
+            });
+
+            progressBar.addEventListener('input', function () {
+                const progress = progressBar.value;
+                const currentTime = (progress / 100) * audioPlayer.duration;
+                audioPlayer.currentTime = currentTime;
+            });
         });
     });
 
     volumeControls.forEach(function(volumeControl, index) {
+        const volumePercentage = volumePercentages[index];
         volumeControl.addEventListener('input', function () {
             const audioPlayer = audioPlayers[index];
             const volume = volumeControl.value;
-            audioPlayer.volume = volume > 0.5 ? 1.0 : volume;
+            audioPlayer.volume = volume;
+            volumePercentage.textContent = `${Math.round(volume * 100)}%`;
         });
     });
 
@@ -149,11 +162,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 images[index].classList.remove('blur');
                 images[index].classList.add('blur2');
                 circles[index].classList.add('img-shadow');
-                
+                progressBars[index].value = 0; // Reset progress bar
+                currentTimeDisplays[index].textContent = '0:00';
             }
         });
     }
 });
+
 // ===============
 
 document.addEventListener('DOMContentLoaded', () => {

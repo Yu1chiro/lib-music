@@ -48,7 +48,7 @@
 <section class="hero bg-center bg-no-repeat  bg-gray-700 bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen text-center py-24 lg:py-56">
         <div class="title">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Welcome to Songs Library</h1>
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-4xl">Humans have the feelings, <br>and so does music every note and melody is an expression of the soul</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Songs is an emotional feeling and expression that makes you happy</p>    
         </div>
             <a href="#library" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
@@ -64,9 +64,8 @@
         <div class="about-title">
             <h1 class="about-title text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">About</h1>     
             <p class="mb-8 text-lg font-normal text-white lg:text-xl sm:px-16 lg:px-48">
-                Sebuah perpustakaan musik sederhana dan kecil yang menampilkan beberapa lagu yang mewakili perasaan dan emosional diriku, musik memberikan diriku kebebasan dalam mengekspresikan perasaan lewat sebuah lagu. 
-                Dengan menulis, mengedit, dan merilis lagu-lagu yang ku ibaratkan sebagai kenyamanan dan rumah ku sendiri. 
-                Musik benar-benar membuka pintu kreativitas dan kebebasan berekspresi tanpa batas.<br> -ゆい☕
+                A simple and small music library that displays several songs that represent my feelings and emotions, music gives me the freedom to express 
+                my feelings through songs.By writing, editing, and releasing songs that I consider to be my own comfort and home. Music truly opens the door to unlimited creativity and freedom of expression.   <br> -Yui☕
             </p> 
             <div class="mt-3">
                 <button data-modal-target="small-modal" data-modal-toggle="small-modal" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
@@ -98,7 +97,7 @@
         <!--==========Eng============-->
         <div class="max-w-sm border rounded-lg music-card" data-category="eng">
             <div class="relative">
-                <img src="img/eng-rain.jpeg" class="rounded w-full blur2 " alt="">
+                <img src="img/eng-rain.jpeg" class="rounded w-full blur2" alt="">
                 <img src="img/eng-rain.jpeg" class="rounded-full img-shadow absolute img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
             </div>
             <div class="p-6">
@@ -108,17 +107,25 @@
                     <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         <i class="fas fa-play"></i>
                     </button>
-                    <div class="flex items-center">
-                        <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                        <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
                     </div>
-                    <div class="duration text-white"></div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">1:48</span>
+                    </div>
+                    <div class="duration text-white mt-2"></div>
                     <button id="audioName" data-audio="audio/Running-in-theRain.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         Download
-                     </button>
+                    </button>
                 </div>
             </div>
         </div>
+        
         <div class="max-w-sm  border rounded-lg music-card" data-category="eng">
             <div class="relative">
                 <img src="img/Stronger.jpeg" class="rounded w-full blur2" alt="">
@@ -131,9 +138,16 @@
                     <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         <i class="fas fa-play"></i>
                     </button>
-                    <div class="flex items-center">
-                        <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                        <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">1:10</span>
                     </div>
                     <div class="duration text-white"></div>
                     <button id="audioName" data-audio="audio/Stronger.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
@@ -154,9 +168,16 @@
                     <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         <i class="fas fa-play"></i>
                     </button>
-                    <div class="flex items-center">
-                        <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                        <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">2:00</span>
                     </div>
                     <div class="duration text-white"></div>
                     <button id="audioName" data-audio="audio/Another World.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
@@ -177,9 +198,16 @@
                     <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         <i class="fas fa-play"></i>
                     </button>
-                    <div class="flex items-center">
-                        <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                        <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">2:00</span>
                     </div>
                     <div class="duration text-white"></div>
                     <button id="audioName" data-audio="audio/Becaouse of you.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
@@ -202,9 +230,16 @@
                         <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             <i class="fas fa-play"></i>
                         </button>
-                        <div class="flex items-center">
-                            <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                            <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                        <div class="flex items-center justify-between mt-3">
+                            <i class="fas fa-volume-up text-white mx-3"></i>
+                            <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                            <i class="fas fa-plus text-white"></i>
+                        </div>
+                        <div class="volume-percentage text-white text-center mt-2">100%</div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-white current-time">0:00</span>
+                            <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                            <span class="text-white total-time">1:54</span>
                         </div>
                         <div class="duration text-white"></div>
                         <button id="audioName" data-audio="audio/雨の中を走る.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
@@ -215,22 +250,29 @@
             </div>    
               <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="japan">
                 <div class="relative">
-                    <img src="img/true-love.jpeg" class="rounded w-full blur2" alt="">
-                    <img src="img/true-love.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
+                    <img src="img/kibou.jpeg" class="rounded w-full blur2" alt="">
+                    <img src="img/kibou.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
                 </div>
                 <div class="p-6">
-                    <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">真実の恋の物語</h2>
-                    <audio class="audio-player" src="audio/True-Love.mp3" type="audio/mp3" loop></audio>
+                    <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">希望</h2>
+                    <audio class="audio-player" src="audio/希望.mp3" type="audio/mp3" loop></audio>
                     <div>
                         <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             <i class="fas fa-play"></i>
                         </button>
-                        <div class="flex items-center">
-                            <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                            <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                        <div class="flex items-center justify-between mt-3">
+                            <i class="fas fa-volume-up text-white mx-3"></i>
+                            <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                            <i class="fas fa-plus text-white"></i>
+                        </div>
+                        <div class="volume-percentage text-white text-center mt-2">100%</div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-white current-time">0:00</span>
+                            <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                            <span class="text-white total-time">1:58</span>
                         </div>
                         <div class="duration text-white"></div>
-                        <button id="audioName" data-audio="audio/True-Love.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        <button id="audioName" data-audio="audio/希望.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             Download
                          </button>
                     </div>
@@ -238,27 +280,34 @@
             </div>    
               <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="japan">
                 <div class="relative">
-                    <img src="img/fireworks.jpeg" class="rounded w-full blur2" alt="">
-                    <img src="img/fireworks.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
+                    <img src="img/rain-village.jpeg" class="rounded w-full blur2" alt="">
+                    <img src="img/rain-village.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
                 </div>
                 <div class="p-6">
-                    <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">花火</h2>
-                    <audio class="audio-player" src="audio/Fireworks.mp3" type="audio/mp3" loop></audio>
+                    <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">夜の雨</h2>
+                    <audio class="audio-player" src="audio/夜の雨.mp3" type="audio/mp3" loop></audio>
                     <div>
                         <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             <i class="fas fa-play"></i>
                         </button>
-                        <div class="flex items-center">
-                            <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                            <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                        <div class="flex items-center justify-between mt-3">
+                            <i class="fas fa-volume-up text-white mx-3"></i>
+                            <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                            <i class="fas fa-plus text-white"></i>
+                        </div>
+                        <div class="volume-percentage text-white text-center mt-2">100%</div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-white current-time">0:00</span>
+                            <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                            <span class="text-white total-time">2:00</span>
                         </div>
                         <div class="duration text-white"></div>
-                        <button id="audioName" data-audio="audio/Fireworks.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        <button id="audioName" data-audio="audio/夜の雨.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             Download
                          </button>
                     </div>
                 </div>
-            </div>    
+            </div>        
               <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="japan">
                 <div class="relative">
                     <img src="img/himawari.jpeg" class="rounded w-full blur2" alt="">
@@ -271,9 +320,16 @@
                         <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             <i class="fas fa-play"></i>
                         </button>
-                        <div class="flex items-center">
-                            <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                            <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                        <div class="flex items-center justify-between mt-3">
+                            <i class="fas fa-volume-up text-white mx-3"></i>
+                            <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                            <i class="fas fa-plus text-white"></i>
+                        </div>
+                        <div class="volume-percentage text-white text-center mt-2">100%</div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-white current-time">0:00</span>
+                            <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                            <span class="text-white total-time">1:56</span>
                         </div>
                         <div class="duration text-white"></div>
                         <button id="audioName" data-audio="audio/himawari.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
@@ -294,9 +350,16 @@
                         <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             <i class="fas fa-play"></i>
                         </button>
-                        <div class="flex items-center">
-                            <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                            <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                        <div class="flex items-center justify-between mt-3">
+                            <i class="fas fa-volume-up text-white mx-3"></i>
+                            <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                            <i class="fas fa-plus text-white"></i>
+                        </div>
+                        <div class="volume-percentage text-white text-center mt-2">100%</div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-white current-time">0:00</span>
+                            <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                            <span class="text-white total-time">2:00</span>
                         </div>
                         <div class="duration text-white"></div>
                         <button id="audioName" data-audio="audio/夏は晴れだ.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
@@ -317,9 +380,16 @@
                         <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                             <i class="fas fa-play"></i>
                         </button>
-                        <div class="flex items-center">
-                            <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                            <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                        <div class="flex items-center justify-between mt-3">
+                            <i class="fas fa-volume-up text-white mx-3"></i>
+                            <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                            <i class="fas fa-plus text-white"></i>
+                        </div>
+                        <div class="volume-percentage text-white text-center mt-2">100%</div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-white current-time">0:00</span>
+                            <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                            <span class="text-white total-time">1:32</span>
                         </div>
                         <div class="duration text-white"></div>
                         <button id="audioName" data-audio="audio/Beautiful moon.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
@@ -329,7 +399,96 @@
                 </div>
             </div> 
         <!--========LOFI=========  -->
-        
+        <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="lofi">
+            <div class="relative">
+                <img src="img/cherry.jpeg" class="rounded w-full blur2" alt="">
+                <img src="img/cherry.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
+            </div>
+            <div class="p-6">
+                <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">Kyoto Vibes</h2>
+                <audio class="audio-player" src="audio/CherryBlossom.mp3" type="audio/mp3" loop></audio>
+                <div>
+                    <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">2:02</span>
+                    </div>
+                    <div class="duration text-white"></div>
+                    <button id="audioName" data-audio="audio/CherryBlossom.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        Download
+                     </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="lofi">
+            <div class="relative">
+                <img src="img/village.jpeg" class="rounded w-full blur2" alt="">
+                <img src="img/village.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
+            </div>
+            <div class="p-6">
+                <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">Summer Village</h2>
+                <audio class="audio-player" src="audio/Summer-Village.mp3" type="audio/mp3" loop></audio>
+                <div>
+                    <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">1:51</span>
+                    </div>
+                    <div class="duration text-white"></div>
+                    <button id="audioName" data-audio="audio/Summer-Village.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        Download
+                     </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="lofi">
+            <div class="relative">
+                <img src="img/sweet.jpeg" class="rounded w-full blur2" alt="">
+                <img src="img/sweet.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
+            </div>
+            <div class="p-6">
+                <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">Sweet Chill</h2>
+                <audio class="audio-player" src="audio/sweet-chill.mp3" type="audio/mp3" loop></audio>
+                <div>
+                    <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">1:08</span>
+                    </div>
+                    <div class="duration text-white"></div>
+                    <button id="audioName" data-audio="audio/sweet-chill.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        Download
+                     </button>
+                </div>
+            </div>
+        </div>
         <!--========VOCALOID=========  -->
         <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="vocaloid">
             <div class="relative">
@@ -343,12 +502,49 @@
                     <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         <i class="fas fa-play"></i>
                     </button>
-                    <div class="flex items-center">
-                        <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                        <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">1:14</span>
                     </div>
                     <div class="duration text-white"></div>
                     <button id="audioName" data-audio="audio/お姫様.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        Download
+                     </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-sm bg-gray-900 border rounded-lg music-card" data-category="vocaloid">
+            <div class="relative">
+                <img src="img/fireworks.jpeg" class="rounded w-full blur2" alt="">
+                <img src="img/fireworks.jpeg" class="rounded-full absolute img-shadow img-circle top-4 flex justify-center w-56 border-4 border-white" alt="">
+            </div>
+            <div class="p-6">
+                <h2 style="margin-bottom: 1rem;" class="text-xl font-bold tracking-tight text-white">花火</h2>
+                <audio class="audio-player" src="audio/Fireworks.mp3" type="audio/mp3" loop></audio>
+                <div>
+                    <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">1:54</span>
+                    </div>
+                    <div class="duration text-white"></div>
+                    <button id="audioName" data-audio="audio/Fireworks.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         Download
                      </button>
                 </div>
@@ -366,9 +562,16 @@
                     <button class="play-pause mb-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
                         <i class="fas fa-play"></i>
                     </button>
-                    <div class="flex items-center">
-                        <i class="fas fa-volume-up mt-1 mr-2 text-white"></i>
-                        <input type="range" class="volume-control" min="0" max="1.5" step="0.01" value="1" style="width: 80%;">
+                    <div class="flex items-center justify-between mt-3">
+                        <i class="fas fa-volume-up text-white mx-3"></i>
+                        <input type="range" class="volume-control mx-3" min="0" max="1" step="0.01" value="1" style="width: 60%;">
+                        <i class="fas fa-plus text-white"></i>
+                    </div>
+                    <div class="volume-percentage text-white text-center mt-2">100%</div>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-white current-time">0:00</span>
+                        <input type="range" class="progress-bar mx-3" min="0" max="100" step="0.1" value="0" style="width: 60%;">
+                        <span class="text-white total-time">2:00</span>
                     </div>
                     <div class="duration text-white"></div>
                     <button id="audioName" data-audio="audio/Summer Fest.mp3" data-modal-target="default-modal" data-modal-toggle="default-modal" class="download mt-3 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center rounded-full">
