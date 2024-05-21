@@ -361,4 +361,29 @@ Lyrics: ${data.lyrics}
                 });
             });
         });
+// ==================
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Function to change text on hover
+    function changeTextOnHover(element) {
+        const originalText = element.textContent;
+        const newText = element.getAttribute('data-hover-text');
+
+        element.addEventListener('mouseenter', () => {
+            element.textContent = newText;
+        });
+
+        element.addEventListener('mouseleave', () => {
+            element.textContent = originalText;
+        });
+    }
+
+    // Select all elements with the class 'hover-text'
+    const hoverTextElements = document.querySelectorAll('.hover-text');
+
+    // Apply the hover effect to each element with the class 'hover-text'
+    hoverTextElements.forEach(element => {
+        changeTextOnHover(element);
+    });
+});
+
 
