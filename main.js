@@ -1,3 +1,31 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all links with hashes
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    for (const link of links) {
+        link.addEventListener('click', function (event) {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Get the target element
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Delay before starting the smooth scroll
+                setTimeout(function () {
+                    // Smooth scroll to the target element
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 200); // Adjust the delay time (200ms) as needed
+            }
+        });
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     var loadingSpinner = document.createElement('div');
     loadingSpinner.id = 'loading-spinner';
@@ -28,7 +56,7 @@ document.querySelectorAll('.filter-btn').forEach(function(button) {
         var musicCards = document.querySelectorAll('.music-card');
 
         var firstVisibleCard = null;
-        var categoriesToHighlight = ['eng', 'japan', 'lofi'];
+        var categoriesToHighlight = ['eng', 'japan', 'lofi','vocaloid','beat'];
 
         musicCards.forEach(function(card) {
             if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {

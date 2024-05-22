@@ -1,4 +1,5 @@
-/* Tambahkan ini ke dalam file CSS Anda */
+
+  
 #loading-spinner {
   position: fixed;
   width: 100%;
@@ -57,7 +58,7 @@
     height:100vh;
 }
 .title {
-    margin-top:5rem;
+    margin-top:3rem;
 }
 .about-title{
     margin-top:2rem;
@@ -97,6 +98,7 @@
    }
   
 }
+
 /* @media (min-width: 1200px) {
     #music {
         margin-left:10rem!important;
@@ -124,7 +126,7 @@
 }
 
 .highlight {
-    box-shadow: 10px 20px 10px aqua;
+    box-shadow: 10 20 20px aqua;
 }
 
 .blur {
@@ -154,7 +156,7 @@
     margin:5rem 0;
 }
 .hero {
-    background:url('/img/village.jpeg');
+    background:url('/img/bg.jpeg');
     background-size:cover;
     background-repeat:no-repeat;
 }
