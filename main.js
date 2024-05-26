@@ -27,27 +27,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    var loadingSpinner = document.createElement('div');
-    loadingSpinner.id = 'loading-spinner';
-    loadingSpinner.innerHTML = `
-      <div class="spinner6">
-        <i class="fas fa-music"></i>
-        <i class="fas fa-music"></i>
-        <i class="fas fa-music"></i>
-        <i class="fas fa-music"></i>
-      </div>`;
-    document.body.appendChild(loadingSpinner);
-  });
+    // Cek apakah loading spinner sudah pernah ditampilkan sebelumnya
+    if (!localStorage.getItem('loadingShown')) {
+        var loadingSpinner = document.createElement('div');
+        loadingSpinner.id = 'loading-spinner';
+        loadingSpinner.innerHTML = `
+          <div class="spinner6">
+            <i class="fas fa-music"></i>
+            <i class="fas fa-music"></i>
+            <i class="fas fa-music"></i>
+            <i class="fas fa-music"></i>
+          </div>`;
+        document.body.appendChild(loadingSpinner);
+    }
+});
   
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var loadingSpinner = document.getElementById('loading-spinner');
-      if (loadingSpinner) {
-        loadingSpinner.style.display = 'none';
-      }
-    }, 1000); // Penundaan 2 detik
-  });
-  
+window.addEventListener('load', function() {
+    // Jika loading spinner ada di halaman, sembunyikan setelah 1 detik
+    var loadingSpinner = document.getElementById('loading-spinner');
+    if (loadingSpinner) {
+        setTimeout(function() {
+            loadingSpinner.style.display = 'none';
+            // Set flag di localStorage bahwa loading spinner sudah ditampilkan
+            localStorage.setItem('loadingShown', 'true');
+        }, 1000); // Penundaan 1 detik
+    }
+});
+
 
 // =================
 document.querySelectorAll('.filter-btn').forEach(function(button) {
