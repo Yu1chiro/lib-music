@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (loadingSpinner) {
         loadingSpinner.style.display = 'none';
       }
-    }, 2000); // Penundaan 2 detik
+    }, 1000); // Penundaan 2 detik
   });
   
 
